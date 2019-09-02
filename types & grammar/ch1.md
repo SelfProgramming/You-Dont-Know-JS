@@ -1,19 +1,19 @@
 # You Don't Know JS: Types & Grammar
 # Chapter 1: Types
 
-Most developers would say that a dynamic language (like JS) does not have *types*. Let's see what the ES5.1 specification (http://www.ecma-international.org/ecma-262/5.1/) has to say on the topic:
+Большинство разработчиков скажут, что динамический язык (такой как JS) не имеет *типов*. Посмотрим, что на это может сказать спецификация ES5.1 (http://www.ecma-international.org/ecma-262/5.1/):
 
-> Algorithms within this specification manipulate values each of which has an associated type. The possible value types are exactly those defined in this clause. Types are further sub classified into ECMAScript language types and specification types.
+> Алгоритмы этой спецификации манипулируют значениями, каждое из который имеет относящийся к нему тип. Возможные типы значений - это те, которые определены в этом разделе. Типы далее подразделяются на типы ECMAScript языка и типы спецификации.
 >
-> An ECMAScript language type corresponds to values that are directly manipulated by an ECMAScript programmer using the ECMAScript language. The ECMAScript language types are Undefined, Null, Boolean, String, Number, and Object.
+> Тип ECMAScript языка соответствует значениям, которыми напрямую манипулирует ECMAScript разработчик используя ECMAScript язык. Типы ECMAScript языка: Undefined, Null, Boolean, String, Number, and Object.
 
-Now, if you're a fan of strongly typed (statically typed) languages, you may object to this usage of the word "type." In those languages, "type" means a whole lot *more* than it does here in JS.
+Теперь, если вы являетесь поклонником строго-типизированых(статически-типизированых) языков, вы можете возразить против такого использования слова "тип". В этих языках "тип" означает намного *больше* чем здесь, в JS.
 
-Some people say JS shouldn't claim to have "types," and they should instead be called "tags" or perhaps "subtypes".
+Некоторые люди говорят, что JS не должен утверджать, что он имеет типы и вместо этого их стоит называть "тегами" или, возможно, "подтипами".
 
-Bah! We're going to use this rough definition (the same one that seems to drive the wording of the spec): a *type* is an intrinsic, built-in set of characteristics that uniquely identifies the behavior of a particular value and distinguishes it from other values, both to the engine **and to the developer**.
+НО! Мы собираемся использовать это грубое определение (то же самое, которое, по-видимому, определяет формулировка спецификации): *тип* - это подлинный, встроенный набор характеристик, который уникальным образом идентифицирует поведение определенного значения и выделяет его на фоне других значений, как для движка, **так и для разработчика**.
 
-In other words, if both the engine and the developer treat value `42` (the number) differently than they treat value `"42"` (the string), then those two values have different *types* -- `number` and `string`, respectively. When you use `42`, you are *intending* to do something numeric, like math. But when you use `"42"`, you are *intending* to do something string'ish, like outputting to the page, etc. **These two values have different types.**
+Другими словами, если и движок, и разработчик обрабатывают значение `42` (число) иначе, чем они обрабатывают значение `"42"` (строка), то эти два значения имеют разные *типы* -- `число` и `строка`, соответственно. When you use `42`, you are *intending* to do something numeric, like math. But when you use `"42"`, you are *intending* to do something string'ish, like outputting to the page, etc. **These two values have different types.**
 
 That's by no means a perfect definition. But it's good enough for this discussion. And it's consistent with how JS describes itself.
 
